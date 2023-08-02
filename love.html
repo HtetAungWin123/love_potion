@@ -1,0 +1,226 @@
+
+
+<style>
+  @import url(https://fonts.googleapis.com/css?family=Pacifico);
+body {
+  background: url(https://subtlepatterns.com/patterns/noise_lines.png);
+  font-family: 'Pacifico', cursive;
+  overflow: hidden;
+  color: #fff;
+}
+.bgoverlay {
+  background: rgb(103, 58, 183);
+  background: rgba(103, 58, 183, 0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.container {
+  position: relative;
+  margin: 120px auto 0 auto;
+  width: 320px;
+}
+
+.ico {
+  display: block;
+  width: 320px;
+  height: 320px;
+}
+.open .ico {
+  animation: open 4s;
+  transform: scale(10);
+}
+.ico .title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -95px;
+  margin-top: -73px;
+  z-index: 4;
+  font-size: 23px;
+  font-family: 'Pacifico', cursive;
+  color: #fff;
+  cursor: pointer;
+  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+}
+.open .ico .title {
+  opacity: 0;
+  transition: all 0.3s ease;
+  top: -100px;
+}
+.ico:before, .ico:after, .ico2:before, .ico2:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.ico:before, .ico:after, .ico2:before, .ico2:after {
+  display: block;
+  font-size: 20em;
+  color: #ff4081;
+  content: "\f004";
+  font-family: FontAwesome;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.ico2:before, .ico2:after {
+  color: #e91e63;
+}
+.ico:before {
+  z-index: 3;
+}
+.ico:after {
+  animation: explode 4s infinite;
+}
+
+.ico2:before {
+  animation: explodeSmall 3s infinite;
+}
+.ico2:after {
+  animation: explodeSmall 2s infinite;
+}
+
+.endtext {
+  opacity: 0;
+  position: absolute;
+  top: -100px;
+  width: 100%;
+  border: 3px solid white;
+}
+.open .endtext {
+  top: 0;
+  opacity: 1;
+  animation: show 5s;
+}
+.endtext .close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+  animation: show 5s;
+}
+.endtext h1, .endtext h2, .endtext h3 {
+  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  font-weight: normal;
+}
+.endtext h1 {
+  width: 100%;
+  font-size: 24px;
+}
+.endtext h2 {
+  font-size: 23px;
+}
+.endtext h3 {
+  font-size: 20px;
+}
+
+@keyframes explode {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
+@keyframes explodeSmall {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+}
+
+@keyframes open {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(10);
+  }
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+    top: -100px;
+  }
+  to {
+    opacity: 1;
+    top: 0;
+  }
+}
+
+.btn {
+        background: pink;
+        color: #fff;
+        padding: 1rem 3rem;
+        font-size: 1.5rem;
+        font-weight: 600;
+        text-align: center;
+        border: none;
+        cursor: pointer;
+        transition-duration: 0.4s;
+    }
+
+    .btn:hover {
+        background: #fff;
+        box-shadow: 0px 2px 20px 10px #97B1BF;
+        color: #000;
+    }
+
+  
+</style>
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<!-- Happy Valentines day Codepen! -->
+
+<div class="bgoverlay">
+  <div class="container">
+    <span class="ico">
+      <span class="ico2"></span><span class="title"><span style="margin-right: 20px;font-size: 14px;">If you wanna translate My Heart Beats.....</span><br>Click This Heart  <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-chat-heart-fill" viewBox="0 0 16 16">
+        <path d="M8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6-.097 1.016-.417 2.13-.771 2.966-.079.186.074.394.273.362 2.256-.37 3.597-.938 4.18-1.234A9.06 9.06 0 0 0 8 15Zm0-9.007c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132Z"/>
+      </svg></span><img style="margin-left: 300px;" src="sanji.png">
+    </span><br>
+    <div class="endtext">
+      <span class="close" title="Restart"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-x-square-fill" viewBox="0 0 16 16">
+  <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708z"/>
+</svg></span>  <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-arrow-through-heart-fill" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M2.854 15.854A.5.5 0 0 1 2 15.5V14H.5a.5.5 0 0 1-.354-.854l1.5-1.5A.5.5 0 0 1 2 11.5h1.793l3.103-3.104a.5.5 0 1 1 .708.708L4.5 12.207V14a.5.5 0 0 1-.146.354l-1.5 1.5ZM16 3.5a.5.5 0 0 1-.854.354L14 2.707l-1.006 1.006c.236.248.44.531.6.845.562 1.096.585 2.517-.213 4.092-.793 1.563-2.395 3.288-5.105 5.08L8 13.912l-.276-.182A23.825 23.825 0 0 1 5.8 12.323L8.31 9.81a1.5 1.5 0 0 0-2.122-2.122L3.657 10.22a8.827 8.827 0 0 1-1.039-1.57c-.798-1.576-.775-2.997-.213-4.093C3.426 2.565 6.18 1.809 8 3.233c1.25-.98 2.944-.928 4.212-.152L13.292 2 12.147.854A.5.5 0 0 1 12.5 0h3a.5.5 0 0 1 .5.5v3Z"/>
+      </svg>
+      <h1>I always had a huge crush on you.</h1>
+      <h2>But today I am proposing to You.</h2>
+      <h3>Will You be my forever valentine?</h3>
+      <div style="margin-left:286px;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-arrow-through-heart-fill" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M2.854 15.854A.5.5 0 0 1 2 15.5V14H.5a.5.5 0 0 1-.354-.854l1.5-1.5A.5.5 0 0 1 2 11.5h1.793l3.103-3.104a.5.5 0 1 1 .708.708L4.5 12.207V14a.5.5 0 0 1-.146.354l-1.5 1.5ZM16 3.5a.5.5 0 0 1-.854.354L14 2.707l-1.006 1.006c.236.248.44.531.6.845.562 1.096.585 2.517-.213 4.092-.793 1.563-2.395 3.288-5.105 5.08L8 13.912l-.276-.182A23.825 23.825 0 0 1 5.8 12.323L8.31 9.81a1.5 1.5 0 0 0-2.122-2.122L3.657 10.22a8.827 8.827 0 0 1-1.039-1.57c-.798-1.576-.775-2.997-.213-4.093C3.426 2.565 6.18 1.809 8 3.233c1.25-.98 2.944-.928 4.212-.152L13.292 2 12.147.854A.5.5 0 0 1 12.5 0h3a.5.5 0 0 1 .5.5v3Z"/>
+      </svg>
+      </div>
+      <div class="btn"><a href="https://www.facebook.com/profile.php?id=100010336063291" target="_blank">Way to My Heart</a></div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('.title').click(function(){
+      $('.container').addClass('open');
+    });
+
+
+    $('.close').click(function(){
+      $('.container').removeClass('open');
+    });
+  });
+</script>
